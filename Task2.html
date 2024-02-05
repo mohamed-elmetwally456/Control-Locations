@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task2</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      ul {
+        display: flex;
+        min-height: 10vh;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      ul > li {
+        list-style: none;
+      }
+      ul > li > a {
+        text-decoration: none;
+        font: bold 15px verdana;
+        color: rgb(163 155 155);
+      }
+      ul > li > a:hover {
+        color: rgb(211 45 45);
+      }
+      .intro {
+        background-image: url(laptop_top.jpg);
+        height: 90vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+      .intro > h4 {
+        font-size: 2rem;
+        margin: 2rem 0;
+      }
+      .intro button {
+        padding: 1rem 1.5rem;
+        border: none;
+        outline: none;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        background-image: linear-gradient(
+          to left,
+          rgb(237, 26, 26),
+          rgb(47, 57, 246)
+        );
+      }
+      .intro button:hover {
+        background-image: linear-gradient(
+          to left,
+          rgb(30, 120, 255),
+          rgb(246, 47, 54)
+        );
+      }
+      .mainsec {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px auto;
+        margin-left: 43vw;
+      }
+      .mainsec > h2 {
+        font-weight: bold;
+        font-size: 3rem;
+        font-style: italic;
+        color: rgb(210, 0, 0);
+      }
+      .mainsec > p {
+        font-weight: bold;
+        font-size: 1rem;
+        font-style: italic;
+        color: rgb(0, 0, 0);
+      }
+      .footer1 {
+        background-color: rgb(23, 23, 23);
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        font-style: tahoma;
+      }
+      .div1 {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 100px;
+        padding-top: 10px;
+        height: 35px;
+      }
+      .div2 i {
+        display: flex;
+      }
+      .sec3 {
+        display: flex;
+        padding-bottom: 20px;
+      }
+      .social-icons ul li {
+        text-align: center;
+        display: inline-block;
+        padding: 3px 3px;
+      }
+      .social-icons ul li a {
+        background-color: #e4e2e2;
+        display: inline-block;
+        border-color: #1f1e1e;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+      }
+      #container {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 150px;
+        margin-right: 200px;
+        flex-wrap: wrap;
+      }
+      img {
+        width: 300px;
+        margin: 20px;
+        margin-left: 100px;
+      }
+      #locations {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 500px;
+      }
+      #branches {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      #branches > li {
+        font-weight: bold;
+        font-size: 1.1rem;
+        border: 0.5px solid rgba(190, 188, 188, 0.528);
+        background-color: rgba(189, 189, 189, 0.636);
+        padding: 15px;
+        width: 300px;
+        height: 50px;
+        margin: 0px 0px 8px 8px;
+      }
+      #checkboxes {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Gallery</a>
+      </li>
+    </ul>
+    <section class="intro">
+      <h4>ITI MANSOURA BRANCH</h4>
+      <button>Register</button>
+    </section>
+    <section class="mainsec">
+      <h2>ITI Locations</h2>
+      <p>ITI Locations Off Over the Countery</p>
+    </section>
+    <div id="container">
+      <div id="img">
+        <img src="map.jpg" />
+      </div>
+      <div id="locations">
+        <ul id="branches">
+          <li>ITI-Aswan</li>
+          <br />
+          <li>ITI-Cairo</li>
+          <br />
+          <li>ITI-Fayoum</li>
+          <br />
+          <li>ITI-Mansoura</li>
+          <br />
+        </ul>
+        <ul id="branches">
+          <li>ITI_Minya</li>
+          <br />
+          <li>ITI-Smart</li>
+          <br />
+          <li>ITI-Minufya</li>
+          <br />
+          <li>ITI-Assuit</li>
+          <br />
+        </ul>
+        <div id="checkboxes">
+          <input
+            type="checkbox"
+            id="mainbranchCheckbox"
+            onchange="toggleBranches()"
+          />MainBranch <br />
+          <input
+            type="checkbox"
+            id="branchCheckbox"
+            onchange="toggleBranches()"
+          />branch <br />
+        </div>
+      </div>
+    </div>
+    <footer class="footer1">
+      <div class="div1">
+        <h2>Contact Us</h2>
+        <div id="socialdiv">
+          <h2>Follow US</h2>
+          <div class="social-icons">
+            <ul>
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="div2">
+        <section class="sec3">
+          <i class="fa-solid fa-location-crosshairs"></i>
+          <p>
+            28km by Cairo / Alexandria Desert Road,6 <br />
+            October B148,Egypt
+          </p>
+        </section>
+        <section class="sec3">
+          <i class="fa-solid fa-phone-flip"></i>
+          <p>01014015130</p>
+        </section>
+        <section class="sec3">
+          <i class="fa-solid fa-envelope"></i>
+          <p>mohamedmetoo660@gmail.com</p>
+        </section>
+      </div>
+    </footer>
+    <script>
+      function toggleBranches() {
+        var mainBranchCheckbox = document.getElementById("mainbranchCheckbox");
+        var branchCheckbox = document.getElementById("branchCheckbox");
+        var branchesList = document.getElementById("branches");
+        var branches = branchesList.getElementsByTagName("li");
+        for (var i = 0; i < branches.length; i++) {
+          if (mainBranchCheckbox.checked) {
+            branches[i].style.display = i === 0 ? "block" : "none";
+            branches[i].style.background = i === 0 ? "red" : "lightgray";
+          } else if (branchCheckbox.checked) {
+            branches[i].style.display = i === 0 ? "none" : "block";
+          } else {
+            branches[i].style.display = "block";
+            branches[i].style.background = "lightgray";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
